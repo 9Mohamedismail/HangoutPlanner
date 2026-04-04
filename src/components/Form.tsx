@@ -1,74 +1,62 @@
+import FormInputShell from "./FormInputShell";
+
 function Form() {
   return (
-    <div className="flex flex-col md:flex-row gap-4">
+    <div className="flex flex-col md:flex-row gap-4 bg-background">
       <div className="flex flex-col flex-1 gap-6.25">
-        <div className="flex flex-col gap-1.5">
-          <label className="text-body">Name</label>
-          <input
-            type="text"
-            placeholder="Event Title"
-            className="h-14.75 w-full rounded-[14px] border border-secondary px-4.5 outline-none text-body"
-          />
-        </div>
+        <FormInputShell
+          label="Name"
+          inputType="text"
+          placeholder="Event Title"
+        />
 
         <div className="flex flex-col gap-1.5">
-          <div className="flex flex-col gap-1.5">
-            <label className="text-body">Suggest a Physical Location?</label>
+          <label className="text-body">Suggest a Physical Location?</label>
 
-            <div className="flex flex-row gap-8.75">
-              <label className="flex space-x-3.5">
-                <input
-                  type="radio"
-                  className="h-7 w-7 rounded-[29px] border border-black px-4.5 outline-none"
-                />
-                <span className="text-body">Yes</span>
-              </label>
+          <div className="flex flex-row gap-8.75">
+            <label className="flex items-center space-x-3.5">
+              <input
+                type="radio"
+                className="h-7 w-7 border border-black outline-none bg-[#FFFFFF]"
+                name="physicalLocation"
+              />
+              <span className="text-body">Yes</span>
+            </label>
 
-              <label className="flex space-x-3.5">
-                <input
-                  type="radio"
-                  className="h-7 w-7 rounded-[29px] border border-black px-4.5 outline-none"
-                />
-                <span className="text-body">No</span>
-              </label>
-            </div>
+            <label className="flex items-center space-x-3.5">
+              <input
+                type="radio"
+                className="h-7 w-7 border border-black outline-none bg-[#FFFFFF]"
+                name="physicalLocation"
+              />
+              <span className="text-body">No</span>
+            </label>
           </div>
         </div>
 
-        <div className="flex flex-col gap-1.5">
-          <label className="text-body">Enter a place</label>
-          <input
-            type="text "
-            placeholder="(e.g., 'Discord' or 'Mike’s House')"
-            className="h-14.75 w-full rounded-[14px] border border-black px-4.5 outline-none text-body"
-          />
-        </div>
+        <FormInputShell
+          label="Enter a place"
+          inputType="text"
+          placeholder="(e.g., 'Discord' or 'Mike’s House')"
+        />
 
-        <div className="flex flex-col gap-1.5">
-          <label className="text-body">Event Date</label>
-          <input
-            type="text"
-            placeholder="Event Date"
-            className="h-14.75 w-full rounded-[14px] border border-secondary px-4.5 outline-none text-body"
-          />
-        </div>
+        <FormInputShell
+          label="Event Date"
+          inputType="text"
+          placeholder="Event Date"
+        />
 
-        <div className="flex flex-col gap-1.5">
-          <label className="text-body">Event Time</label>
-          <input
-            type="text"
-            placeholder="Event Time"
-            className="h-14.75 w-full rounded-[14px] border border-secondary px-4.5 outline-none text-body"
-          />
-        </div>
+        <FormInputShell
+          label="Event Time"
+          inputType="text"
+          placeholder="Event Time"
+        />
 
-        <div className="flex flex-col gap-1.5">
-          <label className="text-body">Event Description</label>
-          <textarea
-            placeholder="Event Description"
-            className="min-h-47.5 w-full rounded-[14px] border border-black px-4.5 py-4.5 outline-none resize-none text-body"
-          />
-        </div>
+        <FormInputShell
+          label="Event Description"
+          placeholder="Event Description"
+          multiline
+        />
       </div>
 
       <div className="flex flex-1">
