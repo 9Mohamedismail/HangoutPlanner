@@ -2,7 +2,7 @@ import FormInputShell from "./FormInputShell";
 
 function Form() {
   return (
-    <div className="flex flex-col md:flex-row gap-4 bg-background">
+    <div className="flex flex-col md:flex-row gap-4">
       <div className="flex flex-col flex-1 gap-6.25">
         <FormInputShell
           label="Name"

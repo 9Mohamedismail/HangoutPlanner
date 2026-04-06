@@ -7,7 +7,7 @@ function EventPage() {
   return (
     <div>
       <EventInfo />
-      <div className="lg:grid lg:grid-cols-2 flex flex-col gap-6 items-stretch">
+      <div className="lg:grid lg:grid-cols-2 flex flex-col gap-6 mt-6 items-stretch">
         <div className="h-full">
           <GoogleMaps />
         </div>
